@@ -1,3 +1,9 @@
 body{
     font-family: Arial;
+    background-color: rgb(68, 211, 68);
+}
+h1{
+    color: white;
+    text-align: center;
+    background-color: green;
 }
