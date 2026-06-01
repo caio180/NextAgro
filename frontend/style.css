@@ -106,3 +106,15 @@ footer h3{
 footer p{
     margin: 5px 0;
 }
+#form_sugestao input, textarea{
+    border: 2px solid black;
+    padding: 7px;
+}
+#form_sugestao button{
+    background-color: rgb(76, 221, 76);
+    border: 2px solid green;
+    padding: 5px;
+}
+#form_sugestao button:hover{
+    background-color: greenyellow;
+}
