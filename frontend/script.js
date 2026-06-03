@@ -1,6 +1,6 @@
 const api = 'http://localhost:5000/formSugestao'
 function formuSuges(){
-    const form = document.getElementById('formSugestao')
+    const form = document.getElementById('formSugestao');
     form.addEventListener('submit', (e)=>{
         e.preventDefault()
 
@@ -30,20 +30,14 @@ function formuSuges(){
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                alert("Cadastro realizado com sucesso");
-                 document.getElementById('formnome').value = "";
-                 document.getElementById('formemail').value = "";
-                 document.getElementById('melhoria'). value = "";
-                 document.getElementById('assuntos'). value = "";
-                 document
-        document.querySelectorAll('input[name="avaliacao"]').forEach(radio => {
-            radio.checked = false;
-        })
+                alert("Formulário enviado");
+                form.reset()
+        
+            })
             .catch(error => {
             console.error(error);
             alert("Erro ao enviar formulario");
-        });
-        
-        })
-    })
+            });
+  })
 }
+formuSuges()
