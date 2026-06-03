@@ -15,7 +15,7 @@ app.post('/formSugestao', (req, res) =>{
     sugestoes.push(req.body)
     res.json(sugestoes)
 })
-app.get('/forSugestao', (req, res) =>{
+app.get('/formSugestao', (req, res) =>{
     res.json(sugestoes)
 })
 
