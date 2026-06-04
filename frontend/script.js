@@ -1,6 +1,6 @@
 const api = 'http://localhost:5000/formSugestao'
 function formuSuges(){
-    const form = document.getElementById('formSugestao');
+    const form = document.getElementById('formularioSugestao');
     form.addEventListener('submit', (e)=>{
         e.preventDefault()
 
