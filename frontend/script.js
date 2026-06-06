@@ -26,8 +26,9 @@ function formuSuges(){
                     
                 })
             })
-            
-            .then(response => response.json())
+            .then(response => {
+                response.json();
+             })
             .then(data => {
                 console.log(data);
                 alert("Formulário enviado");
@@ -35,8 +36,8 @@ function formuSuges(){
         
             })
             .catch(error => {
-            console.error(error);
-            alert("Erro ao enviar formulario");
+                console.error(error);
+                alert("Erro ao enviar formulario");
             });
   })
 }
