@@ -11,34 +11,43 @@ function formuSuges(){
         const avaliacao = document.querySelector(
             'input[name="avaliacao"]:checked'
         )?.id;
-        fetch(api, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    nome: nome,
-                    email: email,
-                    Sugestao_melhoria: melhoria,
-                    Sugestao_assuntos: assuntos,
-                    avaliacao: avaliacao
+        if (nome === '' || email === '' || melhoria === '' || assuntos === '' || avaliacao === undefined){
+            alert("Preencha todos os campos")
+        }
+        else if (!email.includes("@")){
+            alert("Email inválido")
+        }
+        else{
+
+            fetch(api, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nome: nome,
+                        email: email,
+                        Sugestao_melhoria: melhoria,
+                        Sugestao_assuntos: assuntos,
+                        avaliacao: avaliacao
 
                     
+                    })
                 })
-            })
-            .then(response => {
-                response.json();
-             })
-            .then(data => {
-                console.log(data);
-                alert("Formulário enviado");
-                form.reset()
+                .then(response => {
+                    response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    alert("Formulário enviado");
+                    form.reset()
         
-            })
-            .catch(error => {
-                console.error(error);
-                alert("Erro ao enviar formulario");
-            });
-  })
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("Erro ao enviar formulario");
+                });
+        }
+    })
 }
 formuSuges()
