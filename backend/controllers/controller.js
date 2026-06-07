@@ -1,7 +1,7 @@
-import criarSugestao from '../models/model.js';
+import criarSugestao from "../models/model.js"
 
 function criarSugestoes(req, res) {
-    criarSugestao.criarSugestoes(req.body, (err, result) => {
+    criarSugestao(req.body, (err, result) => {
 
         if (err) {
             console.error(err);
