@@ -1,4 +1,4 @@
-CREATE DATABASE nextagro;
+CREATE DATABASE IF NOT EXISTS nextagro;
 
 USE nextagro;
 
