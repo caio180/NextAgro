@@ -34,14 +34,11 @@ function formuSuges(){
                     
                     })
                 })
-                .then(response => {
-                    response.json();
-                })
+               .then(response => response.json())
                 .then(data => {
-                    console.log(data);
+                     console.log(data);
                     alert("Formulário enviado");
-                    form.reset()
-        
+                    form.reset();
                 })
                 .catch(error => {
                     console.error(error);
