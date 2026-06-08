@@ -67,13 +67,13 @@ NextAgro/
 │   └── script.js
 │
 ├── img/
-│   ├── banner_nextagro.jpg
-│   ├── agro_brasil.jpg
-│   ├── cafe.jpg
 │   ├── acucar.jpg
+│   ├── agro_brasil.jpg
+│   ├── banner_nextagro.jpg
+│   ├── cafe.jpg
+│   └── problemas_ambientais.jpg
 │   ├── sustentabilidade.jpg
 │   ├── tecnologia.jpg
-│   └── problemas_ambientais.jpg
 │
 └── README.md
 ```
